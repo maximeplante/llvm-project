@@ -268,7 +268,11 @@ bool MarkupFilter::tryPC(const MarkupNode &Node) {
     return true;
   }
   if (!*LI) {
-    printRawElement(Node);
+    highlight();
+    OS << "[[[PC ";
+    printValue(llvm::formatv("{0:x}", MMap->getModuleRelativeAddr(*Addr)));
+    OS << "]]]";
+    restoreColor();
     return true;
   }
 

@@ -15,7 +15,7 @@ CHECK: first[/dir[[SEP]]tmp.c:5]
 CHECK: first[/dir[[SEP]]tmp.c:4]
 CHECK: first[/dir[[SEP]]tmp.c:5]
 
-CHECK: [[BEGIN]]pc:0xff[[END]]
+CHECK: [[BEGIN]]PC 0xff[[END]]
 CHECK: [[BEGIN]]pc:0x100[[END]]
 CHECK: first[/dir[[SEP]]tmp.c:5]
 ERR: error: no mmap covers address
